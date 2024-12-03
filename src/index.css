@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+/* 1. To set default styles for the base elements, use base */
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold
+  }
+  h2 {
+    @apply text-3xl font-bold
+  }
+  h3 {
+    @apply text-2xl font-bold
+  }
+  h4 {
+    @apply text-xl font-bold
+  }
+  h5 {
+    @apply text-lg font-bold
+  }
+  h6 {
+    @apply text-sm font-bold
+  }
+}
+
+/* 2. You can also create things bootstrap component classes like bttn-primary etc */
+@layer components {
+  .btn {
+    @apply bg-slate-300 p-2 w-[20%] m-auto text-center text-yellow-400 rounded hover:cursor-pointer hover:bg-black hover:text-white transition-all ease-in duration-300
+  }
+  .container-box {
+    @apply w-[80%] m-auto
+  }
+}
+
+
+/* 3.0 utilities  */
+
+@layer utilities{
+  .bx-shadow {
+    @apply border outline-none shadow-md shadow-green-300
+  }
+}
+
+
+.downborder::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 120px;
+  background: purple;
+}
+
+.map iframe {
+  width: 100%;
+  height: 60vh;
+}
+.table {
+  overflow: scroll;
+  width: 100%;
+}
+.table table{
+  width: 100%;
+  /* background: red; */
+}
+.table table th {
+  padding: 1rem;
+  color: #fff;
+  text-transform: capitalize;
+}
+.table table thead{
+  background: grey;
+}
+.table table tbody td{
+  padding: 1rem;
+  font-size: 13px;
+  font-weight: 600;
+}
+.table table tbody tr:nth-child(odd){
+  background: #ccc;
+}
+.table table tbody tr:nth-child(even){
+  background: #ccc3;
+}
